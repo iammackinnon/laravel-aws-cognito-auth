@@ -1,6 +1,6 @@
 <?php
 
-namespace Pallant\LaravelAwsCognitoAuth;
+namespace iammackinnon\LaravelAwsCognitoAuth;
 
 use Closure;
 use Illuminate\Contracts\Auth\Factory as AuthFactory;

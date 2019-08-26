@@ -1,6 +1,6 @@
 <?php
 
-namespace Pallant\LaravelAwsCognitoAuth;
+namespace iammackinnon\LaravelAwsCognitoAuth;
 
 use Aws\CognitoIdentityProvider\CognitoIdentityProviderClient;
 use Aws\CognitoIdentityProvider\Exception\CognitoIdentityProviderException;
@@ -206,7 +206,7 @@ class AwsCognitoIdentityGuard implements StatefulGuard
     /**
      * Pull a user from the repository by its "remember me" cookie token.
      *
-     * @param \Pallant\LaravelAwsCognitoAuth\Recaller $recaller
+     * @param \iammackinnon\LaravelAwsCognitoAuth\Recaller $recaller
      * @return null|\Illuminate\Contracts\Auth\Authenticatable
      */
     protected function getUserFromRecaller($recaller)
@@ -230,7 +230,7 @@ class AwsCognitoIdentityGuard implements StatefulGuard
     /**
      * Get a user's cognito tokens from their "remember me" cookie.
      *
-     * @param \Pallant\LaravelAwsCognitoAuth\Recaller $recaller
+     * @param \iammackinnon\LaravelAwsCognitoAuth\Recaller $recaller
      * @return null|array
      */
     protected function getCognitoTokensFromRecaller($recaller)
@@ -255,7 +255,7 @@ class AwsCognitoIdentityGuard implements StatefulGuard
     /**
      * Get the decrypted recaller cookie for the request.
      *
-     * @return \Pallant\LaravelAwsCognitoAuth\Recaller|null
+     * @return \iammackinnon\LaravelAwsCognitoAuth\Recaller|null
      */
     protected function recaller()
     {
@@ -405,7 +405,7 @@ class AwsCognitoIdentityGuard implements StatefulGuard
      *
      * @param array $credentials
      * @param mixed $errorHandler
-     * @return bool|\Pallant\LaravelAwsCognitoAuth\AuthAttempt
+     * @return bool|\iammackinnon\LaravelAwsCognitoAuth\AuthAttempt
      */
     public function validate(array $credentials = [], $errorHandler = null)
     {
@@ -468,7 +468,7 @@ class AwsCognitoIdentityGuard implements StatefulGuard
     /**
      * Handle a failed authentication attempt.
      *
-     * @param \Pallant\LaravelAwsCognitoAuth\AuthAttempt $response
+     * @param \iammackinnon\LaravelAwsCognitoAuth\AuthAttempt $response
      * @param mixed $handler
      * @return mixed
      */
@@ -543,7 +543,7 @@ class AwsCognitoIdentityGuard implements StatefulGuard
      * Attempt to authenticate with AWS Cognito.
      *
      * @param array $credentials
-     * @return \Pallant\LaravelAwsCognitoAuth\AuthAttempt
+     * @return \iammackinnon\LaravelAwsCognitoAuth\AuthAttempt
      */
     protected function attemptCognitoAuthentication(array $credentials)
     {

@@ -1,20 +1,20 @@
 <?php
 
-namespace Pallant\LaravelAwsCognitoAuth;
+namespace iammackinnon\LaravelAwsCognitoAuth;
 
 use RuntimeException;
 
 class AuthAttemptException extends RuntimeException
 {
     /**
-     * @var \Pallant\LaravelAwsCognitoAuth\AuthAttempt
+     * @var \iammackinnon\LaravelAwsCognitoAuth\AuthAttempt
      */
     protected $response;
 
     /**
      * AuthAttemptException constructor.
      *
-     * @param \Pallant\LaravelAwsCognitoAuth\AuthAttempt $response
+     * @param \iammackinnon\LaravelAwsCognitoAuth\AuthAttempt $response
      */
     public function __construct(AuthAttempt $response)
     {
